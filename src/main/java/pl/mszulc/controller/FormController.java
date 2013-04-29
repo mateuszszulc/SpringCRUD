@@ -15,8 +15,8 @@ import pl.mszulc.model.SimpleForm;
 @RequestMapping("/forms")
 public class FormController {
 
-    @Autowired
-    SessionFactory sessionFactory;
+//    @Autowired
+//    SessionFactory sessionFactory;
 
     @RequestMapping(value = "add", method = RequestMethod.GET)
     public String setupForm(Model model) {
