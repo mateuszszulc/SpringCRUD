@@ -144,7 +144,7 @@
         <dependency>
             <groupId>hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
-            <version>1.8.0.1</version>
+            <version>1.8.0.10</version>
         </dependency>
 
         <dependency>
@@ -153,17 +153,17 @@
             <version>1.7.2</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-c3p0</artifactId>
-            <version>${org.hibernate.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.hibernate</groupId>-->
+            <!--<artifactId>hibernate-c3p0</artifactId>-->
+            <!--<version>${org.hibernate.version}</version>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-ehcache</artifactId>
-            <version>${org.hibernate.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.hibernate</groupId>-->
+            <!--<artifactId>hibernate-ehcache</artifactId>-->
+            <!--<version>${org.hibernate.version}</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>commons-dbcp</groupId>
@@ -210,6 +210,30 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!-- This first dependency includes all the JPA implementations for the DAOs -->
+        <dependency>
+            <groupId>com.googlecode.genericdao</groupId>
+            <artifactId>dao-hibernate</artifactId>
+            <version>1.2.0</version> <!-- use current version -->
+        </dependency>
+        <!-- This second one includes the Hibernate Entity Manager plugin for the framework -->
+        <!--<dependency>-->
+            <!--<groupId>com.googlecode.genericdao</groupId>-->
+            <!--<artifactId>search-jpa-hibernate</artifactId>-->
+            <!--<version>1.2.0</version> &lt;!&ndash; use current version &ndash;&gt;-->
+        <!--</dependency>-->
+
+
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>sonatype-oss-repo</id>
+            <name>Sonatype Open Source maven snapshot repo</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </repository>
+
+    </repositories>
+
 
 </project>
